@@ -1,0 +1,20 @@
+.footer{
+    align-self: end;
+    height: 20%;
+    background-color: #4169E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_title{
+    display: block;
+    margin-bottom: 5%;
+    align-self: center;
+}
+.footer_social{
+    width: 50%;
+    display: flex;  
+    justify-content: space-around;
+    flex-direction: row;
+
+}
