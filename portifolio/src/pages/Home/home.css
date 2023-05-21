@@ -4,15 +4,18 @@
 
 .container-home{
     width: 100%;
-    height: 70%;
+    height: 80vh;
     display:flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 }
-.container-home strong{
+.container-home p{
     width: 50%;
-    font-size: 40px;
+    height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 150%;
     margin-top: 10%;
     color: #1E90FF;
     font-family: 'Permanent Mark', cursive;
@@ -20,9 +23,44 @@
 }
 .container-home img{
     width: 30%;
-    height: 60%;
+    height: 70%;
     align-self: center;
     margin-right: 15%;
-    border-radius: 90px;
-    border: solid #1E90FF 3px;
+    border-radius: 10%;
+    border: solid #1E90FF;
+    border-radius: 100%;
+    transform: translateX(0px);
+    animation: float 5s ease-out infinite;
 }
+
+@keyframes float {
+    0%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateY(-1px);
+
+    }
+    100%{
+
+        transform: translateY(50px);
+    }
+    
+}
+
+@media(max-width: 644px) {
+    .container-home{
+        height: 90vh;
+
+    }
+    .container-home p{
+        font-size: 120%;
+    }
+    .container-home img{
+        width: 30%;
+        height: 40%;
+    }
+
+
+}
+

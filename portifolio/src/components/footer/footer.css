@@ -1,20 +1,40 @@
 .footer{
-    align-self: end;
-    height: 20%;
-    background-color: #4169E1;
+    height: 14vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: 0%;
+    width: 100%;
+    flex-direction: column;
+
+
 }
 .footer_title{
-    display: block;
-    margin-bottom: 5%;
-    align-self: center;
+    color: white;
+    width: 20%;
+    margin-bottom: 2%;
+    
+    
+    
 }
 .footer_social{
     width: 50%;
     display: flex;  
     justify-content: space-around;
     flex-direction: row;
+    text-decoration: none;
+    
+    
 
+}
+.footer_social a{
+    color: white;
+}
+.Darkf{
+    background-color: black;
+}
+.Lightf{
+    background-color: #4169E1;
 }

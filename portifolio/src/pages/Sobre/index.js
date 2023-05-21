@@ -1,9 +1,18 @@
+import 'C:/Users/Dev/Desktop/Aulas-Projetos/Portifolio/portifolio/src/services/changeTheme/theme.css';
+import { useState, useEffect } from 'react';
 import './sobre.css';
+import foto3 from '../../img/foto3.jfif';
 
 
-function Sobre(){
+function Sobre(theme){
+    const [tema,setTema] = useState(theme);
+
+
+    useEffect(()=>{
+        setTema(theme);
+     }, [theme])
     return(
-        <div className="container-sobre">
+        <div className={`${tema.theme} container-sobre `}>
             <strong>
                 Olá, me chamo Matheus, sou Técnico em Desenvolvimento de Sistemas pela Etec de Itanhaém,
                 Atualmente estou cursando Análise e Desenvolvimento de Sistemas na instituição Fatec de Praia Grande.
@@ -12,7 +21,7 @@ function Sobre(){
                 
                 
             </strong>
-            <img src="https://img.quizur.com/f/img6242573ea1c207.33283693.jpg?lastEdited=1648514882" alt="foto de perfil"/>
+            <img src={foto3} alt="foto de perfil"/>
         </div>
     )
 }

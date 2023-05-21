@@ -1,39 +1,48 @@
 
+
 import './header.css';
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {RxHamburgerMenu} from "react-icons/rx";
 
 
 
-function Header(){
-    // const [tema, setTema] = useState();
-    // function mudarTema(){
-    //     if(tema == 'Light'){
-    //         setTema('Dark');
-    //     }else{
-    //         setTema('Light');
-    //     }
-    //     console.log(tema)
-    // }
+function Header(theme){
+    const [tema,setTema] = useState(theme);
+    const logo = '<Matheus-Dev/>';
+
+
+
+
+    useEffect(()=>{
+       setTema(theme);
+    }, [theme])
+
     return(
         
-        <div className='header-container'>
-            <h3 className='logo'>Matheus-Dev</h3>
+        <div className={`header-container ${tema.theme}`}>
+            <div className='menu'>
+                
+                    <RxHamburgerMenu id='botao'/>
+            </div>
+            <h3 className='logo'>{logo}</h3>
             <div className='links'>
-                {/* <button onClick={mudarTema}>tema</button> */}
-                <Link to={'/'}>Home</Link>
-                <Link to={'/about'}>Sobre mim</Link>
-                <Link to={'/skills'} >Skills</Link>
-                <Link to={'/projects'} >Projetos</Link>
+                
+                
+                <Link to={`/`}>Home</Link>
+                <Link to={`/about`}>Sobre mim</Link>
+                <Link to={`/projects`} >Projetos</Link>
                 
                 
                 
             </div>
             
-            {/* <span className='button'>button</span>             */}
+            
         </div>
 
         
     )
 }
+
+    
 export default Header;

@@ -3,6 +3,8 @@ import RouteApp from './routes';
 
 
 function App() {
+  document.title = "Matheus Marazzi";
+
   return (
     
     <div className="App">

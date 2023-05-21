@@ -1,21 +1,41 @@
+import 'C:/Users/Dev/Desktop/Aulas-Projetos/Portifolio/portifolio/src/services/changeTheme/theme.css';
 import './home.css';
+import { useEffect, useState } from 'react';
+import foto1 from '../../img/foto1.jpeg';
 
 
 
-function Home(){
+
+
+
+function Home(theme){
+     
+    const [tema,setTema] = useState(theme);
+
+
+    useEffect(()=>{
+       setTema(theme);
+    }, [theme])
+
+    
+
+    
     return(
-        <div className="container-home">
-            <strong>
+        <div className={` ${tema.theme} container-home `}>
+            
+            <p>
                 Oii, me chamo Matheus, sou Desenvolvedor Web/Mobile.<br/>
                 Obrigado por visitar meu portifólio, aqui você pode me conhecer melhor e ver alguns projetos meus.
             
-            </strong>
+            </p>
 
 
 
-            <img src="https://img.quizur.com/f/img6242573ea1c207.33283693.jpg?lastEdited=1648514882" alt="foto de perfil"/>
+            <img src={foto1} alt="foto de perfil"/>
             
-        
+            
+
+
                 
 
         </div>
